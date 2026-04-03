@@ -3,18 +3,107 @@ import api from "../api/axios";
 import { useCart } from "../context/CartContext"; 
 import { FiSun, FiDroplet ,FiSearch } from "react-icons/fi"; 
 
-// --- 🌿 Dummy Data for 10 Plants (Fallback) ---
 const DUMMY_PLANTS = [
-  { id: 101, name: "Snake Plant", scientific_name: "Sansevieria", price: 1250, category: "Indoor", sunlight: "Low", water: "Weekly", image: "https://images.unsplash.com/photo-1512428813833-414936a3f015?q=80&w=500" },
-  { id: 102, name: "Monstera Deliciosa", scientific_name: "Swiss Cheese Plant", price: 3800, category: "Indoor", sunlight: "Medium", water: "2 Weeks", image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=500" },
-  { id: 103, name: "Areca Palm", scientific_name: "Dypsis lutescens", price: 2200, category: "Outdoor", sunlight: "High", water: "Daily", image: "https://images.unsplash.com/photo-1596701062351-8a29e4475392?q=80&w=500" },
-  { id: 104, name: "Peace Lily", scientific_name: "Spathiphyllum", price: 1550, category: "Indoor", sunlight: "Medium", water: "Weekly", image: "https://images.unsplash.com/photo-1594241764515-54e6016e7894?q=80&w=500" },
-  { id: 105, name: "Aloe Vera", scientific_name: "Aloe barbadensis", price: 950, category: "Outdoor", sunlight: "High", water: "2 Weeks", image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=500" },
-  { id: 106, name: "Spider Plant", scientific_name: "Chlorophytum", price: 1100, category: "Indoor", sunlight: "Medium", water: "Weekly", image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=500" },
-  { id: 107, name: "Rubber Plant", scientific_name: "Ficus elastica", price: 2900, category: "Indoor", sunlight: "Medium", water: "Weekly", image: "https://images.unsplash.com/photo-1520412099561-64831006a319?q=80&w=500" },
-  { id: 108, name: "English Ivy", scientific_name: "Hedera helix", price: 1800, category: "Outdoor", sunlight: "Medium", water: "Daily", image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e5e?q=80&w=500" },
-  { id: 109, name: "ZZ Plant", scientific_name: "Zamioculcas", price: 3200, category: "Indoor", sunlight: "Low", water: "2 Weeks", image: "https://images.unsplash.com/photo-1632205574558-89984917495b?q=80&w=500" },
-  { id: 110, name: "Fiddle Leaf Fig", scientific_name: "Ficus lyrata", price: 4500, category: "Indoor", sunlight: "High", water: "Weekly", image: "https://images.unsplash.com/photo-1525498122346-81c1fd7213b0?q=80&w=500" }
+  { 
+    id: 101, 
+    name: "Snake Plant", 
+    scientific_name: "Sansevieria", 
+    price: 1250, 
+    category: "Indoor", 
+    sunlight: "Low", 
+    water: "Weekly", 
+    image: "https://images.unsplash.com/photo-1545239351-ef35f43d514b?q=80&w=500" 
+  },
+  { 
+    id: 102, 
+    name: "Monstera Deliciosa", 
+    scientific_name: "Swiss Cheese Plant", 
+    price: 3800, 
+    category: "Indoor", 
+    sunlight: "Medium", 
+    water: "2 Weeks", 
+    image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=500" 
+  },
+  { 
+    id: 103, 
+    name: "Areca Palm", 
+    scientific_name: "Dypsis lutescens", 
+    price: 2200, 
+    category: "Outdoor", 
+    sunlight: "High", 
+    water: "Daily", 
+    image: "https://images.unsplash.com/photo-1512428813833-414936a3f015?q=80&w=500" 
+  },
+  { 
+    id: 104, 
+    name: "Peace Lily", 
+    scientific_name: "Spathiphyllum", 
+    price: 1550, 
+    category: "Indoor", 
+    sunlight: "Medium", 
+    water: "Weekly", 
+    image: "https://images.unsplash.com/photo-1594241764515-54e6016e7894?q=80&w=500" 
+  },
+  { 
+    id: 105, 
+    name: "Aloe Vera", 
+    scientific_name: "Aloe barbadensis", 
+    price: 950, 
+    category: "Outdoor", 
+    sunlight: "High", 
+    water: "2 Weeks", 
+    image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=500" 
+  },
+  { 
+    id: 106, 
+    name: "Spider Plant", 
+    scientific_name: "Chlorophytum", 
+    price: 1100, 
+    category: "Indoor", 
+    sunlight: "Medium", 
+    water: "Weekly", 
+    image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=500" 
+  },
+  { 
+    id: 107, 
+    name: "Rubber Plant", 
+    scientific_name: "Ficus elastica", 
+    price: 2900, 
+    category: "Indoor", 
+    sunlight: "Medium", 
+    water: "Weekly", 
+    image: "https://images.unsplash.com/photo-1520412099561-64831006a319?q=80&w=500" 
+  },
+  { 
+    id: 108, 
+    name: "English Ivy", 
+    scientific_name: "Hedera helix", 
+    price: 1800, 
+    category: "Outdoor", 
+    sunlight: "Medium", 
+    water: "Daily", 
+    image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e5e?q=80&w=500" 
+  },
+  { 
+    id: 109, 
+    name: "ZZ Plant", 
+    scientific_name: "Zamioculcas", 
+    price: 3200, 
+    category: "Indoor", 
+    sunlight: "Low", 
+    water: "2 Weeks", 
+    image: "https://images.unsplash.com/photo-1632205574558-89984917495b?q=80&w=500" 
+  },
+  { 
+    id: 110, 
+    name: "Fiddle Leaf Fig", 
+    scientific_name: "Ficus lyrata", 
+    price: 4500, 
+    category: "Indoor", 
+    sunlight: "High", 
+    water: "Weekly", 
+    image: "https://images.unsplash.com/photo-1525498122346-81c1fd7213b0?q=80&w=500" 
+  }
 ];
 
 function Products({ limit }) {
