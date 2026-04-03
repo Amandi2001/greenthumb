@@ -22,7 +22,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Medium", 
     water: "2 Weeks", 
-    image: "https://images.pexels.com/photos/3125117/pexels-photo-3125117.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://images.plnts.com/optimize/q:80/w:3840/plain/https://webshop.plnts.com/media/catalog/product/cache/aa5d334f459227518b6c3cf7ea9d29ed/_/h/_hellomrfancyplants_ugc.jpg" 
   },
   { 
     id: 103, 
