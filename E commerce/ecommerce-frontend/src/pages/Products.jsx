@@ -3,6 +3,19 @@ import api from "../api/axios";
 import { useCart } from "../context/CartContext"; 
 import { FiSun, FiDroplet ,FiSearch } from "react-icons/fi"; 
 
+// --- 🌿 Dummy Data for 10 Plants (Fallback) ---
+const DUMMY_PLANTS = [
+  { id: 101, name: "Snake Plant", scientific_name: "Sansevieria", price: 1250, category: "Indoor", sunlight: "Low", water: "Weekly", image: "https://images.unsplash.com/photo-1512428813833-414936a3f015?q=80&w=500" },
+  { id: 102, name: "Monstera Deliciosa", scientific_name: "Swiss Cheese Plant", price: 3800, category: "Indoor", sunlight: "Medium", water: "2 Weeks", image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=500" },
+  { id: 103, name: "Areca Palm", scientific_name: "Dypsis lutescens", price: 2200, category: "Outdoor", sunlight: "High", water: "Daily", image: "https://images.unsplash.com/photo-1596701062351-8a29e4475392?q=80&w=500" },
+  { id: 104, name: "Peace Lily", scientific_name: "Spathiphyllum", price: 1550, category: "Indoor", sunlight: "Medium", water: "Weekly", image: "https://images.unsplash.com/photo-1594241764515-54e6016e7894?q=80&w=500" },
+  { id: 105, name: "Aloe Vera", scientific_name: "Aloe barbadensis", price: 950, category: "Outdoor", sunlight: "High", water: "2 Weeks", image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=500" },
+  { id: 106, name: "Spider Plant", scientific_name: "Chlorophytum", price: 1100, category: "Indoor", sunlight: "Medium", water: "Weekly", image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=500" },
+  { id: 107, name: "Rubber Plant", scientific_name: "Ficus elastica", price: 2900, category: "Indoor", sunlight: "Medium", water: "Weekly", image: "https://images.unsplash.com/photo-1520412099561-64831006a319?q=80&w=500" },
+  { id: 108, name: "English Ivy", scientific_name: "Hedera helix", price: 1800, category: "Outdoor", sunlight: "Medium", water: "Daily", image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e5e?q=80&w=500" },
+  { id: 109, name: "ZZ Plant", scientific_name: "Zamioculcas", price: 3200, category: "Indoor", sunlight: "Low", water: "2 Weeks", image: "https://images.unsplash.com/photo-1632205574558-89984917495b?q=80&w=500" },
+  { id: 110, name: "Fiddle Leaf Fig", scientific_name: "Ficus lyrata", price: 4500, category: "Indoor", sunlight: "High", water: "Weekly", image: "https://images.unsplash.com/photo-1525498122346-81c1fd7213b0?q=80&w=500" }
+];
 
 function Products({ limit }) {
   const [products, setProducts] = useState([]);
@@ -12,9 +25,14 @@ function Products({ limit }) {
   const [quickViewProduct, setQuickViewProduct] = useState(null);
 
   useEffect(() => {
-    api.get("/products").then((res) => {
-      setProducts(res.data);
-    });
+    api.get("/products")
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((err) => {
+        console.warn("Backend not connected, loading dummy data for demo.");
+        setProducts(DUMMY_PLANTS); // Backend එක වැඩ නැතිනම් Dummy Data පෙන්වයි
+      });
   }, []);
 
   const filteredProducts = products.filter((product) => {
@@ -23,8 +41,14 @@ function Products({ limit }) {
     return matchesSearch && matchesCategory;
   });
 
-  
   const finalProducts = limit ? filteredProducts.slice(0, limit) : filteredProducts;
+
+  // Image URL එක පරීක්ෂා කර සකස් කරන function එක
+  const getProductImage = (image) => {
+    if (!image) return "https://via.placeholder.com/300x200";
+    if (image.startsWith("http")) return image; // Dummy data හෝ online image නම්
+    return `http://127.0.0.1:8000/storage/${image}`; // Local database image නම්
+  };
 
   return (
     <div className="container mt-4">
@@ -57,8 +81,6 @@ function Products({ limit }) {
           finalProducts.map((product) => (
             <div className="col-lg-4 col-md-6 mb-4" key={product.id}>
               <div className="card h-100 border-0 shadow-sm custom-card position-relative">
-                
-                {/* Quick View Button overlay */}
                 <div className="quick-view-btn-container">
                    <button 
                     className="btn btn-quickview shadow-sm"
@@ -70,7 +92,7 @@ function Products({ limit }) {
 
                 <div className="img-container" style={{ height: '250px', overflow: 'hidden' }}>
                   <img 
-                    src={product.image ? `http://127.0.0.1:8000/storage/${product.image}` : "https://via.placeholder.com/300x200"} 
+                    src={getProductImage(product.image)} 
                     className="card-img-top h-100 w-100" 
                     alt={product.name} 
                     style={{ objectFit: 'cover' }}
@@ -109,23 +131,12 @@ function Products({ limit }) {
             </div>
           ))
         ) : (
-                <div className="text-center my-5 py-5 w-100 animate__animated animate__fadeIn">
-          <div className="no-results-icon-box mb-4 mx-auto">
-            <FiSearch size={40} className="text-muted opacity-50" />
+          <div className="text-center my-5 py-5 w-100">
+             <FiSearch size={40} className="text-muted opacity-50" />
+             <h3 className="fw-bold text-dark mt-3">No Plants Found</h3>
           </div>
-          <h3 className="fw-bold text-dark mb-2">No Plants Found</h3>
-          <p className="text-muted mx-auto" style={{ maxWidth: "400px" }}>
-            We couldn't find any plants matching your search. Try using different keywords or clear the filters.
-          </p>
-          <button 
-            className="btn btn-outline-success rounded-pill px-4 mt-3 fw-bold"
-            onClick={() => window.location.reload()} 
-          >
-            Clear Search
-          </button>
-        </div>
-                )}
-              </div>
+        )}
+      </div>
 
       {/* --- Quick View Modal Section --- */}
       {quickViewProduct && (
@@ -135,7 +146,7 @@ function Products({ limit }) {
             <div className="row g-0 h-100">
               <div className="col-md-6 h-100">
                 <img 
-                  src={`http://127.0.0.1:8000/storage/${quickViewProduct.image}`} 
+                  src={getProductImage(quickViewProduct.image)} 
                   className="img-fluid h-100 w-100" 
                   style={{ objectFit: 'cover' }}
                   alt={quickViewProduct.name}
@@ -145,16 +156,16 @@ function Products({ limit }) {
                 <h2 className="fw-bold mb-1">{quickViewProduct.name}</h2>
                 <p className="text-success fw-semibold italic">{quickViewProduct.scientific_name}</p>
                 <hr />
-                <p className="text-muted">{quickViewProduct.description || "Explore the beauty of this botanical piece. Perfect for adding a touch of nature to your lifestyle."}</p>
+                <p className="text-muted">{quickViewProduct.description || "Perfect for adding a touch of nature to your lifestyle."}</p>
                 <div className="d-flex gap-4 mb-4">
-                <div className="d-flex align-items-center">
-                  <FiSun className="text-warning me-2 fs-5" /> 
-                  <span><strong>Sunlight:</strong> {quickViewProduct.sunlight}</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <FiDroplet className="text-info me-2 fs-5" /> 
-                  <span><strong>Water:</strong> {quickViewProduct.water}</span>
-                </div>
+                  <div className="d-flex align-items-center">
+                    <FiSun className="text-warning me-2 fs-5" /> 
+                    <span><strong>Sunlight:</strong> {quickViewProduct.sunlight}</span>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <FiDroplet className="text-info me-2 fs-5" /> 
+                    <span><strong>Water:</strong> {quickViewProduct.water}</span>
+                  </div>
                 </div>
                 <h3 className="fw-bold text-success mb-4">Rs. {quickViewProduct.price}.00</h3>
                 <button 
