@@ -32,7 +32,7 @@ const DUMMY_PLANTS = [
     category: "Outdoor", 
     sunlight: "High", 
     water: "Daily", 
-    image: "https://images.unsplash.com/photo-1512428813833-414936a3f015?q=80&w=500" 
+    image: "https://greensouq.ae/cdn/shop/files/areca-palm-holland-or-chrysalidocarpus-lutescens-4112612.png?v=1774503452&width=800" 
   },
   { 
     id: 104, 
@@ -42,7 +42,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Medium", 
     water: "Weekly", 
-    image: "https://images.unsplash.com/photo-1594241764515-54e6016e7894?q=80&w=500" 
+    image: "https://www.beardsanddaisies.co.uk/cdn/shop/files/peace_lily_grey_ribbed_new.jpg?v=1773065686&width=400" 
   },
   { 
     id: 105, 
@@ -52,7 +52,7 @@ const DUMMY_PLANTS = [
     category: "Outdoor", 
     sunlight: "High", 
     water: "2 Weeks", 
-    image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=500" 
+    image: "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/aloe-vera-white-pot_sunwand24-ss_edit_0.jpg?itok=uOJaHAeR" 
   },
   { 
     id: 106, 
@@ -62,7 +62,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Medium", 
     water: "Weekly", 
-    image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=500" 
+    image: "https://img.crocdn.co.uk/images/products2/pl/20/00/04/40/pl2000044095_card2_lg.jpg" 
   },
   { 
     id: 107, 
@@ -72,7 +72,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Medium", 
     water: "Weekly", 
-    image: "https://images.unsplash.com/photo-1520412099561-64831006a319?q=80&w=500" 
+    image: "https://5.imimg.com/data5/SELLER/Default/2025/7/526918164/AP/IP/IE/41315771/rubber-tree-plant-500x500.jpg" 
   },
   { 
     id: 108, 
@@ -82,7 +82,7 @@ const DUMMY_PLANTS = [
     category: "Outdoor", 
     sunlight: "Medium", 
     water: "Daily", 
-    image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e5e?q=80&w=500" 
+    image: "https://succulentsbox.com/cdn/shop/files/8_2_3f1a116a-07b9-4fc3-9b56-474f6ebdbd3d.jpg?v=1767582522" 
   },
   { 
     id: 109, 
@@ -92,7 +92,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Low", 
     water: "2 Weeks", 
-    image: "https://images.unsplash.com/photo-1632205574558-89984917495b?q=80&w=500" 
+    image: "https://m.media-amazon.com/images/I/81+T+MLbRkL._AC_UF1000,1000_QL80_.jpg" 
   },
   { 
     id: 110, 
@@ -102,7 +102,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "High", 
     water: "Weekly", 
-    image: "https://images.unsplash.com/photo-1525498122346-81c1fd7213b0?q=80&w=500" 
+    image: "https://cdn.shopify.com/s/files/1/0621/8157/2697/files/jqkm7zdcnm7i4azpil8v_1000x1000_crop_center.jpg.webp?v=1750754140" 
   }
 ];
 
