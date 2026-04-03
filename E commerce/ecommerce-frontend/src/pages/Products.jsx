@@ -12,7 +12,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Low", 
     water: "Weekly", 
-    image: "https://images.unsplash.com/photo-1545239351-ef35f43d514b?q=80&w=500" 
+    image: "https://images.squarespace-cdn.com/content/v1/54fbb611e4b0d7c1e151d22a/1610074066643-OP8HDJUWUH8T5MHN879K/Snake+Plant.jpg?format=1000w" 
   },
   { 
     id: 102, 
