@@ -25,7 +25,7 @@ GreenThumb is a modern, full-stack e-commerce platform designed for plant lovers
 
 | Home Page | Admin Dashboard |
 |---|---|
-| ![Home](මෙතැනට_Home_Page_Screenshot_Link) | ![Admin](මෙතැනට_Admin_Dashboard_Screenshot_Link) |
+| ![Home](මෙතැනට_Home_Page_Screenshot_Link) |<img width="1911" height="932" alt="Image" src="https://github.com/user-attachments/assets/730009b5-190c-4a87-95ba-bf373062f2d0" /> |
 
 | Shopping Cart | Quick View |
 |---|---|
