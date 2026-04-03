@@ -3,6 +3,7 @@ import api from "../api/axios";
 import { useNavigate, Link } from "react-router-dom";
 import { BiLeaf } from "react-icons/bi";
 import { FiMail, FiLock, FiArrowRight, FiAlertCircle } from "react-icons/fi";
+import Swal from 'sweetalert2';
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -13,6 +14,27 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError(""); 
+
+    // --- 🔐 Mock Admin Login (For Vercel Demo without Backend) ---
+    if (email === "admin@greenthumb.com" && password === "admin123") {
+      const mockAdmin = { name: "GreenThumb Admin", role: "admin" };
+      
+      localStorage.setItem("token", "dummy-admin-token-99");
+      localStorage.setItem("role", "admin");
+      localStorage.setItem("user", JSON.stringify(mockAdmin));
+
+      Swal.fire({
+        title: 'Welcome Admin! 🌿',
+        text: 'Accessing Dashboard...',
+        icon: 'success',
+        timer: 1500,
+        showConfirmButton: false
+      });
+
+      navigate("/admin"); // මෙතැන ඔබේ Admin Dashboard එකේ Route එක ලබා දෙන්න
+      return;
+    }
+    // ------------------------------------------------------------
 
     try {
       const res = await api.post("/login", { email, password });
@@ -26,7 +48,6 @@ function Login() {
       }
     } catch (error) {
       console.error(error);
-      
       setError("Invalid email or password. Please try again.");
     }
   };
