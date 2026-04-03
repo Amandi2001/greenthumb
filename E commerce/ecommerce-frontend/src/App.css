@@ -1,7 +1,7 @@
-/* Fonts - Poppins font එක පාවිච්චි කිරීමෙන් Professional පෙනුමක් ලැබේ */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 html {
-  scroll-behavior: smooth; /* බට්න් එක එබුවම හෙමීට පහළට යන්න */
+  scroll-behavior: smooth; 
 }
 
 :root {
@@ -23,7 +23,7 @@ body {
   color: var(--text-dark);
 }
 
-/* Container එකේ ඉඩකඩ හැසිරවීම */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -34,44 +34,42 @@ body {
   border: none;
   border-radius: 20px;
   background: #ffffff;
-  /* මුලින් තියෙන ඉතා මෘදු shadow එක */
   box-shadow: 0 4px 15px var(--card-shadow); 
   overflow: hidden;
-  /* කාඩ් එක ඉහළට එසවීමේ වේගය පාලනය කිරීම */
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   cursor: pointer;
 }
 
-/* --- Card එක Hover කළ විට 'ඉල්ලිපිලා' පෙනෙන කොටස --- */
+
 .custom-card:hover {
-  /* කාඩ් එක pixels 15ක් ඉහළට එසවීම */
+  
   transform: translateY(-15px);
-  /* යටින් තද ලස්සන shadow එකක් එකතු වීම */
+  
   box-shadow: 0 25px 50px var(--hover-shadow) !important;
 }
 
-/* පින්තූරය තියෙන කොටස */
+
 .img-container {
   position: relative;
   overflow: hidden;
   background-color: #f8f9fa;
-  height: 250px; /* පින්තූරයේ උස ස්ථාවරව තබා ගැනීම */
+  height: 250px;
 }
 
 .img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* පින්තූරය zoom වීමේ වේගය */
+  
   transition: transform 0.8s ease-in-out;
 }
 
-/* Hover කරන විට පින්තූරය සෙමින් Zoom වීම */
+
 .custom-card:hover .img-container img {
   transform: scale(1.1);
 }
 
-/* Care Guide Icons Section (ලස්සන ලා කොළ පැහැති පෙට්ටිය) */
+
 .care-guide-box {
   background-color: var(--light-green);
   border-radius: 12px;
@@ -81,12 +79,12 @@ body {
   justify-content: space-around;
 }
 
-/* Button Styling - වටකුරු සහ ලස්සන පෙනුම */
+
 .btn-success {
   background-color: var(--primary-green) !important;
   border: none !important;
   font-weight: 600;
-  border-radius: 50px !important; /* Rounded Pill shape */
+  border-radius: 50px !important; 
   padding: 8px 20px !important;
   transition: all 0.3s ease;
 }
@@ -203,17 +201,14 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* Navbar එක ඇතුළත vertical alignment එක නිවැරදි කිරීමට */
+
 .navbar-nav .nav-item {
   display: flex;
   align-items: center;
 }
 
-
-
-
 html {
-  scroll-behavior: smooth; /* එකවර පහළට යන්නේ නැතුව හෙමින් Scroll වීමට */
+  scroll-behavior: smooth; 
 }
 
 .hover-effect {
@@ -575,7 +570,7 @@ tbody tr:hover {
 
 .trust-card:hover {
   transform: translateY(-10px);
-  background: #f8fdf9; /* මඳක් කොළ පැහැති පසුබිමක් */
+  background: #f8fdf9; 
   border-color: #2D6A4F;
   box-shadow: 0 15px 30px rgba(45, 106, 79, 0.1) !important;
 }
@@ -621,7 +616,7 @@ tbody tr:hover {
   height: 60px;
   background: #f1f8f4;
   color: #2D6A4F;
-  border-radius: 18px; /* Rounded square look */
+  border-radius: 18px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -632,7 +627,7 @@ tbody tr:hover {
 .trust-card:hover .trust-icon-box {
   background: #2D6A4F;
   color: white;
-  transform: rotate(10deg); /* පොඩි rotation එකක් ලස්සනට */
+  transform: rotate(10deg); 
 }
 
 
@@ -645,7 +640,7 @@ tbody tr:hover {
 .hero-slide {
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  animation: slideshowAnimation 16s infinite; /* 4 images * 4s each = 16s cycle */
+  animation: slideshowAnimation 16s infinite; 
 }
 
 /* Slideshow Animation Logic */
@@ -880,12 +875,12 @@ tbody tr:hover {
 .no-results-icon-box {
   width: 100px;
   height: 100px;
-  background-color: #f8f9fa; /* ඉතාමත් ලා අළු පැහැති පසුබිම */
+  background-color: #f8f9fa; 
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #dee2e6; /* තිත් ඉරක් සහිත රවුම */
+  border: 2px dashed #dee2e6; 
 }
 
 .text-dark.fw-bold {
@@ -904,7 +899,7 @@ tbody tr:hover {
   border-color: #2D6A4F;
 }
 
-//cart.jsx file Css
+
 /* --- Professional Cart Styling --- */
 
 .qty-control {
@@ -942,7 +937,7 @@ tbody tr:hover {
 }
 
 
-//login page CSS
+
 /* --- Modern Split Login Page Styles --- */
 
 .login-wrapper {
@@ -1002,7 +997,7 @@ tbody tr:hover {
   box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2) !important;
 }
 
-//checkout page CSS
+
 /* --- Professional Checkout Styling --- */
 
 .checkout-wrapper {
