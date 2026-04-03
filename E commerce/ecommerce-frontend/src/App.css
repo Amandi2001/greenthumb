@@ -1,0 +1,1047 @@
+/* Fonts - Poppins font එක පාවිච්චි කිරීමෙන් Professional පෙනුමක් ලැබේ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+html {
+  scroll-behavior: smooth; /* බට්න් එක එබුවම හෙමීට පහළට යන්න */
+}
+
+:root {
+  --primary-green: #2d6a4f;    /* Dark Forest Green */
+  --accent-green: #40916c;     /* Medium Green */
+  --light-green: #d8f3dc;      /* Very Light Mint */
+  --bg-color: #fcfdfc;         /* Off-white Background */
+  --text-dark: #1b4332;        /* Dark Greenish Text */
+  --card-shadow: rgba(45, 106, 79, 0.08); /* Soft Shadow color */
+  --hover-shadow: rgba(45, 106, 79, 0.18); /* Hover Shadow color */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+}
+
+/* Container එකේ ඉඩකඩ හැසිරවීම */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Design - GreenThumb Aesthetic */
+.custom-card {
+  border: none;
+  border-radius: 20px;
+  background: #ffffff;
+  /* මුලින් තියෙන ඉතා මෘදු shadow එක */
+  box-shadow: 0 4px 15px var(--card-shadow); 
+  overflow: hidden;
+  /* කාඩ් එක ඉහළට එසවීමේ වේගය පාලනය කිරීම */
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+/* --- Card එක Hover කළ විට 'ඉල්ලිපිලා' පෙනෙන කොටස --- */
+.custom-card:hover {
+  /* කාඩ් එක pixels 15ක් ඉහළට එසවීම */
+  transform: translateY(-15px);
+  /* යටින් තද ලස්සන shadow එකක් එකතු වීම */
+  box-shadow: 0 25px 50px var(--hover-shadow) !important;
+}
+
+/* පින්තූරය තියෙන කොටස */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  height: 250px; /* පින්තූරයේ උස ස්ථාවරව තබා ගැනීම */
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* පින්තූරය zoom වීමේ වේගය */
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Hover කරන විට පින්තූරය සෙමින් Zoom වීම */
+.custom-card:hover .img-container img {
+  transform: scale(1.1);
+}
+
+/* Care Guide Icons Section (ලස්සන ලා කොළ පැහැති පෙට්ටිය) */
+.care-guide-box {
+  background-color: var(--light-green);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Button Styling - වටකුරු සහ ලස්සන පෙනුම */
+.btn-success {
+  background-color: var(--primary-green) !important;
+  border: none !important;
+  font-weight: 600;
+  border-radius: 50px !important; /* Rounded Pill shape */
+  padding: 8px 20px !important;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: var(--accent-green) !important;
+  transform: scale(1.05); /* බට්න් එකත් මදක් ලොකු වීම */
+  box-shadow: 0 5px 15px rgba(45, 106, 79, 0.3);
+}
+
+/* Page Header */
+h2 {
+  font-weight: 600;
+  color: var(--primary-green);
+  letter-spacing: -0.5px;
+}
+
+/* --- Professional Navbar Custom Styles --- */
+
+.custom-nav {
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  height: 70px; /* Navbar උස පාලනය කළා */
+}
+
+.logo-icon {
+  background: #f1f8f4;
+  padding: 6px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: #2D6A4F;
+}
+
+/* Nav Links Hover & Active */
+.nav-hover {
+  color: #444 !important;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-hover:hover, .active-link {
+  color: #2D6A4F !important;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background: #2D6A4F;
+  border-radius: 2px;
+}
+
+/* Cart Badge එකේ position එක වචනයට පසුව එන සේ සකස් කිරීම */
+.cart-badge {
+  position: relative; /* absolute වෙනුවට relative භාවිතා කර බලන්න */
+  top: -8px;
+  left: -2px;
+  background: #2D6A4F;
+  color: white;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  border: 1.5px solid white;
+}
+
+/* Admin & Login Buttons */
+.admin-pill {
+  background: #1B4332;
+  color: white !important;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  padding: 5px 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.admin-pill:hover {
+  background: #2d6a4f;
+  transform: translateY(-2px);
+}
+
+.login-btn {
+  background: #2D6A4F;
+  color: white !important;
+  border-radius: 20px;
+  padding: 8px 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(45, 106, 79, 0.2);
+}
+
+/* --- Logout Button Custom Styling --- */
+
+.logout-btn-custom {
+  background: transparent;
+  color: #dc3545; /* රතු පැහැය */
+  border: 2px solid #dc3545;
+  border-radius: 20px;
+  padding: 6px 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.logout-btn-custom:hover {
+  background: #dc3545;
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Navbar එක ඇතුළත vertical alignment එක නිවැරදි කිරීමට */
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+html {
+  scroll-behavior: smooth; /* එකවර පහළට යන්නේ නැතුව හෙමින් Scroll වීමට */
+}
+
+.hover-effect {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.hero-section h1 {
+  animation: fadeInDown 1s;
+}
+
+/* Scrollbar styling for a premium look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D6A4F;
+  border-radius: 10px;
+}
+
+.product-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.quick-view-overlay {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(45, 106, 79, 0.9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.product-card:hover .quick-view-overlay { opacity: 1; }
+
+.quick-view-modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-custom {
+  background: white; width: 800px; max-width: 90%;
+  border-radius: 20px; overflow: hidden; position: relative;
+}
+
+.close-btn {
+  position: absolute; right: 20px; top: 10px;
+  background: none; border: none; font-size: 2rem; color: #333; z-index: 11;
+}
+
+.collection-card { transition: 0.3s; cursor: pointer; }
+.collection-card:hover { transform: scale(1.03); }
+
+
+/* Quick View Button on Card */
+.custom-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+.quick-view-btn-container {
+  position: absolute;
+  top: 180px; /* පින්තූරය උඩ දිස්වීමට */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.custom-card:hover .quick-view-btn-container {
+  opacity: 1;
+}
+
+/* Modal Overlay Styles */
+.quick-view-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.quick-view-modal-content {
+  background: white;
+  width: 900px;
+  max-width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #333;
+  z-index: 10001;
+}
+
+@media (max-width: 768px) {
+  .quick-view-modal-content {
+    height: auto;
+    overflow-y: auto;
+  }
+}
+
+/* Quick View Button - Premium Green Style */
+.btn-quickview {
+  background-color: #1B4332 !important; /* තද කොළ පාට */
+  color: white !important;
+  font-weight: bold;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 50px; /* වටකුරු දාර */
+  border: none;
+  transition: all 0.3s ease;
+  width: 140px;
+}
+
+/* Mouse එක බට්න් එක උඩට ගිය විට */
+.btn-quickview:hover {
+  background-color: #2D6A4F !important; /* පොඩ්ඩක් ලා කොළ පාටක් */
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(27, 67, 50, 0.3) !important;
+}
+
+/* Container එකේ වෙනස */
+.quick-view-btn-container {
+  position: absolute;
+  top: 170px; /* පින්තූරය මැදට වන්නට */
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 10;
+}
+
+/* Card එක උඩට mouse එක ගිය විට බට්න් එක පෙනෙන ආකාරය */
+.custom-card:hover .quick-view-btn-container {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* පින්තූරය උඩට කළු පැහැති අඳුරක් (Overlay) එක් කිරීම */
+.custom-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 250px;
+  background: rgba(0,0,0,0.05);
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 15px 15px 0 0;
+}
+
+.custom-card:hover::after {
+  opacity: 1;
+}
+
+/* Admin UI Refinement */
+.x-small {
+  font-size: 0.75rem;
+}
+
+.label-style {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6c757d;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Category Badge */
+.badge-custom {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2d6a4f;
+  background-color: #f1f8f4;
+  border: 1px solid #d8eadd;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+/* Professional Buttons */
+.btn-edit {
+  background-color: #eef2ff;
+  color: #4338ca;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.btn-edit:hover { background-color: #e0e7ff; color: #3730a3; }
+
+.btn-delete {
+  background-color: #fef2f2;
+  color: #dc2626;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.btn-delete:hover { background-color: #fee2e2; color: #b91c1c; }
+
+/* Table Row Hover */
+tbody tr:hover {
+  background-color: #fcfcfc;
+}
+
+.form-control-sm, .form-select-sm {
+  font-size: 0.85rem;
+  border: 1px solid #e2e8f0;
+}
+
+.badge-custom {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  border-radius: 50px;
+}
+
+.animate__fadeIn {
+  animation-duration: 0.5s;
+}
+
+/* Admin Button Custom Green Style */
+.admin-btn-custom {
+  color: #2D6A4F !important; /* ඔබේ පද්ධතියේ තද කොළ පැහැය */
+  border: 1.5px solid #2D6A4F; /* කොළ පාට බෝඩරය */
+  border-radius: 50px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mouse එක බට්න් එක උඩට ගිය විට (Hover) */
+.admin-btn-custom:hover {
+  background-color: #2D6A4F; /* පසුබිම කොළ පැහැවේ */
+  color: white !important; /* අකුරු සුදු පැහැවේ */
+  box-shadow: 0 4px 10px rgba(45, 106, 79, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Navbar එකේ අනිත් ලින්ක් වලට සමාන වෙන්න ඕන නම් මේ පේළිය භාවිතා කරන්න */
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+/* Status Dropdown Base Style */
+.status-select {
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  appearance: none; /* Default arrow එක අයින් කිරීමට */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+/* Pending - ලා කහ */
+.status-pending {
+  background-color: #fef9c3 !important;
+  color: #a16207 !important;
+  border: 1px solid #fde047 !important;
+}
+
+/* Processing - ලා නිල් */
+.status-processing {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+  border: 1px solid #bae6fd !important;
+}
+
+/* Delivered - ලා කොළ */
+.status-delivered {
+  background-color: #dcfce7 !important;
+  color: #15803d !important;
+  border: 1px solid #bbf7d0 !important;
+}
+
+/* Cancelled - ලා රතු */
+.status-cancelled {
+  background-color: #fee2e2 !important;
+  color: #b91c1c !important;
+  border: 1px solid #fecaca !important;
+}
+
+.care-guide-box svg {
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+.care-guide-box span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Trust Badges Card Styling */
+.trust-card {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.trust-card:hover {
+  transform: translateY(-10px);
+  background: #f8fdf9; /* මඳක් කොළ පැහැති පසුබිමක් */
+  border-color: #2D6A4F;
+  box-shadow: 0 15px 30px rgba(45, 106, 79, 0.1) !important;
+}
+
+/* Icon Box Animation */
+.trust-icon-box {
+  width: 65px;
+  height: 65px;
+  background: #f1f8f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: 0.3s ease;
+}
+
+.trust-card:hover .trust-icon-box {
+  background: #2D6A4F;
+  color: white !important;
+  transform: scale(1.1);
+}
+
+.animate__delay-1s { animation-delay: 0.2s; }
+.animate__delay-2s { animation-delay: 0.4s; }
+.animate__delay-3s { animation-delay: 0.6s; }
+
+
+/* Trust Card Modern Styling */
+.trust-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid transparent !important;
+}
+
+.trust-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(45, 106, 79, 0.1) !important;
+  border: 1px solid #d1e7dd !important;
+}
+
+.trust-icon-box {
+  width: 60px;
+  height: 60px;
+  background: #f1f8f4;
+  color: #2D6A4F;
+  border-radius: 18px; /* Rounded square look */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: 0.3s ease;
+}
+
+.trust-card:hover .trust-icon-box {
+  background: #2D6A4F;
+  color: white;
+  transform: rotate(10deg); /* පොඩි rotation එකක් ලස්සනට */
+}
+
+
+/* --- New Premium Hero Styles (App.css) --- */
+
+.hero-slideshow-container {
+  z-index: 0;
+}
+
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  animation: slideshowAnimation 16s infinite; /* 4 images * 4s each = 16s cycle */
+}
+
+/* Slideshow Animation Logic */
+@keyframes slideshowAnimation {
+  0% { opacity: 0; }
+  5% { opacity: 1; }  /* Fade in */
+  25% { opacity: 1; } /* Stay fully visible for 3s (4s total) */
+  30% { opacity: 0; } /* Fade out */
+  100% { opacity: 0; } /* Wait for full cycle */
+}
+
+/* Initial active slide to show before animation starts */
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Fix Button and Text alignment issues */
+.hero-action-btn {
+  min-width: 220px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.hero-action-btn:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.display-1.fw-bold {
+  color: white !important;
+}
+
+/* Make Green text slightly softer */
+.sanctuary-text {
+  color: #74c69d !important;
+}
+
+
+/* --- Left Aligned Hero Styles --- */
+
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  animation: slideshowAnimation 16s infinite;
+}
+
+@keyframes slideshowAnimation {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.hero-slide.active { opacity: 1; }
+
+
+
+/* Button UI (Square/Sharp edges for a professional look) */
+.btn-lg.rounded-0 {
+  transition: all 0.3s ease;
+}
+
+.btn-lg.rounded-0:hover {
+  transform: scale(1.05);
+  background-color: #1b4332 !important;
+  color: #fff !important;
+}
+
+/* --- Hero Button Fixes (පිරිපුන් & Professional Look) --- */
+
+.hero-action-btn {
+  min-width: 240px; /* පළල මඳක් වැඩි කළා */
+  padding-top: 18px !important; /* උස වැඩි කිරීමට පෑඩිං */
+  padding-bottom: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  
+  /* අකුරු වල පෙනුම */
+  font-size: 1rem !important; 
+  font-weight: 700 !important; /* අකුරු තද (Bold) කළා */
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* අකුරු අතර පරතරය */
+}
+
+/* Hover කරද්දී පෙනුම */
+.hero-action-btn:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3) !important;
+}
+/* Shop All Plants - Hover */
+.hero-action-btn:first-child:hover {
+  transform: translateY(-5px);
+  background-color: #386641 !important; /* මඳක් ලා කොළ පැහැයක් */
+  box-shadow: 0 10px 20px rgba(45, 106, 79, 0.4) !important;
+}
+
+/* Our Story - Hover */
+.hero-action-btn:last-child:hover {
+  transform: translateY(-5px);
+  background-color: #2d6a4f !important;
+  opacity: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* "GREEN SANCTUARY" වචනය සඳහා පමණක් කොළ පැහැය */
+.green-text {
+  color: #2D6A4F !important; /* කැපී පෙනෙන ලස්සන කොළ පැහැයක් */
+  
+ 
+}
+
+
+
+.contact-icon-box {
+  width: 45px;
+  height: 45px;
+  /* තද පසුබිමක් මත සුදු අකුරු වලට ගැළපෙන පරිදි Icon Box එකේ වර්ණය */
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: #4ade80; /* ලා කොළ පැහැති අයිකනය */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-icon-box:hover {
+  background-color: #2D6A4F;
+  color: white;
+  transform: scale(1.1);
+  border-color: #2D6A4F;
+}
+
+/* අකුරු වල font-size එක මඳක් වැඩි කිරීමට */
+.text-white.opacity-75 {
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+/* --- Modern Footer Styles --- */
+
+.footer-section {
+  background-color: #121212 !important; /* Rich Dark Background */
+}
+
+.footer-logo-box {
+  background: rgba(74, 222, 128, 0.1);
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-subtext {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Footer Links Hover Effects */
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #a0a0a0;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-links a:hover {
+  color: #4ade80 !important;
+  transform: translateX(8px);
+}
+
+/* Social Icon Buttons */
+.social-icon-btn {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon-btn:hover {
+  background: #2D6A4F;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 2rem;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.footer-legal-links a {
+  text-decoration: none;
+  color: #666;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.footer-legal-links a:hover {
+  color: #4ade80;
+}
+
+
+/* --- No Results Found Styling --- */
+
+.no-results-icon-box {
+  width: 100px;
+  height: 100px;
+  background-color: #f8f9fa; /* ඉතාමත් ලා අළු පැහැති පසුබිම */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #dee2e6; /* තිත් ඉරක් සහිත රවුම */
+}
+
+.text-dark.fw-bold {
+  letter-spacing: -0.5px;
+}
+
+.btn-outline-success {
+  border-color: #2D6A4F;
+  color: #2D6A4F;
+  transition: 0.3s;
+}
+
+.btn-outline-success:hover {
+  background-color: #2D6A4F;
+  color: white;
+  border-color: #2D6A4F;
+}
+
+//cart.jsx file Css
+/* --- Professional Cart Styling --- */
+
+.qty-control {
+  border: 1px solid #e9ecef;
+}
+
+.qty-control .btn-white {
+  background: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.qty-control .btn-white:hover {
+  background: #2D6A4F;
+  color: white;
+}
+
+.checkout-btn {
+  background-color: #2D6A4F !important;
+  letter-spacing: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(45, 106, 79, 0.2) !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(45, 106, 79, 0.02);
+}
+
+.sticky-top {
+  z-index: 10;
+}
+
+
+//login page CSS
+/* --- Modern Split Login Page Styles --- */
+
+.login-wrapper {
+  min-height: 90vh;
+  background-color: #f8fdf9; /* ඉතාමත් ලා කොළ පැහැති පසුබිම */
+}
+
+/* වම් පැත්තේ පින්තූරය */
+.login-image-side {
+  background-image: url('https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* පින්තූරය මත අඳුරු Overlay එකක් */
+.login-image-side::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo Box */
+.login-logo {
+  background: #f1f8f4;
+  padding: 12px;
+  border-radius: 15px;
+}
+
+/* Input Group Styles */
+.custom-input-group {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.custom-input-group input:focus {
+  box-shadow: none;
+  background-color: #f1f8f4 !important;
+}
+
+/* Submit Button */
+.login-submit-btn {
+  background-color: #1B4332 !important;
+  border: none;
+  transition: 0.3s;
+}
+
+.login-submit-btn:hover {
+  background-color: #2D6A4F !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2) !important;
+}
+
+//checkout page CSS
+/* --- Professional Checkout Styling --- */
+
+.checkout-wrapper {
+  background-color: #f8fdf9 !important; /* ලා පැහැති පසුබිම */
+}
+
+.icon-badge {
+  background: rgba(45, 106, 79, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.payment-notice {
+  background-color: #f1f8f4;
+  border: 1px solid rgba(45, 106, 79, 0.1);
+}
+
+.checkout-submit-btn {
+  background-color: #1B4332 !important;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.checkout-submit-btn:hover {
+  background-color: #2D6A4F !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2) !important;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+  border-width: 2px !important;
+}
+
+.checkout-items::-webkit-scrollbar {
+  width: 5px;
+}
+
+.checkout-items::-webkit-scrollbar-thumb {
+  background: #e9ecef;
+  border-radius: 10px;
+}
