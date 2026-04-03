@@ -2,8 +2,9 @@
 
 GreenThumb is a modern, full-stack e-commerce platform designed for plant lovers. It features a sleek user interface, a robust shopping cart system, and a comprehensive admin control panel to manage inventory and customer orders.
 
-<img width="1201" height="4484" alt="Image" src="https://github.com/user-attachments/assets/348d5186-819e-4268-81aa-2a0d08edf35b" />
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/348d5186-819e-4268-81aa-2a0d08edf35b" alt="GreenThumb Banner" width="100%">
+</p>
 ---
 
 ## Key Features
