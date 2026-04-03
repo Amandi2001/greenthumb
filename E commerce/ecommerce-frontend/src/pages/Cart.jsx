@@ -70,11 +70,15 @@ function Cart() {
                         <td className="ps-4 py-3">
                           <div className="d-flex align-items-center">
                             <img 
-                              src={`http://127.0.0.1:8000/storage/${item.image}`} 
-                              alt={item.name} 
-                              style={{ width: '70px', height: '70px', objectFit: 'cover', borderRadius: '15px' }}
-                              className="me-3 border shadow-sm"
-                            />
+  src={item.image.startsWith('http') ? item.image : `http://127.0.0.1:8000/storage/${item.image}`} 
+  alt={item.name} 
+  className="img-fluid rounded-3"
+  style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+  onError={(e) => {
+    e.target.onerror = null; 
+    e.target.src = "https://via.placeholder.com/100x100?text=Plant";
+  }}
+/>
                             <span className="fw-bold text-dark">{item.name}</span>
                           </div>
                         </td>
