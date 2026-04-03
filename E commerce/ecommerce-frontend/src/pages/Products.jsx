@@ -12,7 +12,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Low", 
     water: "Weekly", 
-    image: "https://images.pexels.com/photos/6208086/pexels-photo-6208086.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://images.squarespace-cdn.com/content/v1/54fbb611e4b0d7c1e151d22a/1610074066643-OP8HDJUWUH8T5MHN879K/Snake+Plant.jpg?format=1000w" 
   },
   { 
     id: 102, 
@@ -22,7 +22,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Medium", 
     water: "2 Weeks", 
-    image: "https://images.plnts.com/optimize/q:80/w:3840/plain/https://webshop.plnts.com/media/catalog/product/cache/aa5d334f459227518b6c3cf7ea9d29ed/_/h/_hellomrfancyplants_ugc.jpg" 
+    image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=500" 
   },
   { 
     id: 103, 
@@ -32,7 +32,7 @@ const DUMMY_PLANTS = [
     category: "Outdoor", 
     sunlight: "High", 
     water: "Daily", 
-    image: "https://images.pexels.com/photos/4006567/pexels-photo-4006567.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://greensouq.ae/cdn/shop/files/areca-palm-holland-or-chrysalidocarpus-lutescens-4112612.png?v=1774503452&width=800" 
   },
   { 
     id: 104, 
@@ -42,7 +42,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Medium", 
     water: "Weekly", 
-    image: "https://images.pexels.com/photos/4505171/pexels-photo-4505171.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://www.beardsanddaisies.co.uk/cdn/shop/files/peace_lily_grey_ribbed_new.jpg?v=1773065686&width=400" 
   },
   { 
     id: 105, 
@@ -52,7 +52,7 @@ const DUMMY_PLANTS = [
     category: "Outdoor", 
     sunlight: "High", 
     water: "2 Weeks", 
-    image: "https://images.pexels.com/photos/2261165/pexels-photo-2261165.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/aloe-vera-white-pot_sunwand24-ss_edit_0.jpg?itok=uOJaHAeR" 
   },
   { 
     id: 106, 
@@ -62,7 +62,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Medium", 
     water: "Weekly", 
-    image: "https://images.pexels.com/photos/4603349/pexels-photo-4603349.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://img.crocdn.co.uk/images/products2/pl/20/00/04/40/pl2000044095_card2_lg.jpg" 
   },
   { 
     id: 107, 
@@ -72,7 +72,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Medium", 
     water: "Weekly", 
-    image: "https://images.pexels.com/photos/4750302/pexels-photo-4750302.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://5.imimg.com/data5/SELLER/Default/2025/7/526918164/AP/IP/IE/41315771/rubber-tree-plant-500x500.jpg" 
   },
   { 
     id: 108, 
@@ -82,7 +82,7 @@ const DUMMY_PLANTS = [
     category: "Outdoor", 
     sunlight: "Medium", 
     water: "Daily", 
-    image: "https://images.pexels.com/photos/4505437/pexels-photo-4505437.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://succulentsbox.com/cdn/shop/files/8_2_3f1a116a-07b9-4fc3-9b56-474f6ebdbd3d.jpg?v=1767582522" 
   },
   { 
     id: 109, 
@@ -92,7 +92,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "Low", 
     water: "2 Weeks", 
-    image: "https://images.pexels.com/photos/7513150/pexels-photo-7513150.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://m.media-amazon.com/images/I/81+T+MLbRkL._AC_UF1000,1000_QL80_.jpg" 
   },
   { 
     id: 110, 
@@ -102,7 +102,7 @@ const DUMMY_PLANTS = [
     category: "Indoor", 
     sunlight: "High", 
     water: "Weekly", 
-    image: "https://images.pexels.com/photos/7014410/pexels-photo-7014410.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    image: "https://cdn.shopify.com/s/files/1/0621/8157/2697/files/jqkm7zdcnm7i4azpil8v_1000x1000_crop_center.jpg.webp?v=1750754140" 
   }
 ];
 
