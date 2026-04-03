@@ -2,7 +2,7 @@
 
 GreenThumb is a modern, full-stack e-commerce platform designed for plant lovers. It features a sleek user interface, a robust shopping cart system, and a comprehensive admin control panel to manage inventory and customer orders.
 
-![Home Page Preview](මෙතැනට_ඔබේ_Home_Page_Screenshot_එකේ_Link_එක_දාන්න)
+<img width="1201" height="4484" alt="Image" src="https://github.com/user-attachments/assets/348d5186-819e-4268-81aa-2a0d08edf35b" />
 
 ---
 
@@ -23,13 +23,14 @@ GreenThumb is a modern, full-stack e-commerce platform designed for plant lovers
 
 ## Screenshots
 
-| Home Page | Admin Dashboard |
+| Admin Dashboard | Shopping Cart |
 |---|---|
-| <img width="1201" height="4484" alt="Image" src="https://github.com/user-attachments/assets/348d5186-819e-4268-81aa-2a0d08edf35b" /> |<img width="1911" height="932" alt="Image" src="https://github.com/user-attachments/assets/730009b5-190c-4a87-95ba-bf373062f2d0" /> |
+| <img width="1911" height="932" alt="Image" src="https://github.com/user-attachments/assets/730009b5-190c-4a87-95ba-bf373062f2d0" /> |<img width="1890" height="913" alt="Image" src="https://github.com/user-attachments/assets/46267ee2-7aaf-4e93-8755-e55a5d224e34" /> |
 
-| Shopping Cart | Quick View |
+| Checkout  | Quick View |
 |---|---|
-| <img width="1890" height="913" alt="Image" src="https://github.com/user-attachments/assets/46267ee2-7aaf-4e93-8755-e55a5d224e34" /> | <img width="1903" height="921" alt="Image" src="https://github.com/user-attachments/assets/85fcf267-a4ac-4992-afe8-06f79b67dcf1" /> |
+| <img width="1900" height="927" alt="image" src="https://github.com/user-attachments/assets/937a4f93-b529-4dcf-b078-f5822a70a701" /> | <img width="1903" height="921" alt="Image" src="https://github.com/user-attachments/assets/85fcf267-a4ac-4992-afe8-06f79b67dcf1" /> |
+
 
 ---
 
